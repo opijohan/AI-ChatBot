@@ -1,6 +1,6 @@
 # Quick Note
 
-This Project was built for learning User Auth and Using the OpenAi API.
+This Project was ONLY built for learning User Auth and Using the OpenAi API.
 
 # Religion AI
 
