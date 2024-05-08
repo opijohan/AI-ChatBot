@@ -9,10 +9,11 @@ import {
   DrawerHeader,
   DrawerTrigger,
 } from "@/components/ui/drawer";
+import { auth } from "@/auth";
 
 interface SidebarProps extends React.HTMLAttributes<HTMLDivElement> {}
 
-export function Header({ className }: SidebarProps) {
+export async function Header({ className }: SidebarProps) {
   const pathname = usePathname();
   const items = [
     {
@@ -31,11 +32,8 @@ export function Header({ className }: SidebarProps) {
 
   const getAuthButtons = () => (
     <div className="flex gap-3 items-center">
-      <Link href="/" target="_blank">
-        <p className="md:text-sm text-sm leading-7 text-minor">Login</p>
-      </Link>
-      <Link href="/" target="_blank">
-        <button className="inline-flex items-center justify-center whitespace-nowrap text-sm ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-[#C2A5AA] font-semibold hover:bg-primary/90 max-w-fit h-8 rounded-md px-4 py-1 ">
+      <Link href="/chatbot">
+        <button className="inline-flex items-center justify-center whitespace-nowrap text-sm ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-[#e94f37] font-semibold hover:bg-primary/90 max-w-fit h-8 rounded-md px-4 py-1 ">
           <p className=" md:text-sm text-sm leading-7 text-minor text-[#0B0808]">
             Sign Up
           </p>
